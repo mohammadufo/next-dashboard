@@ -13,6 +13,8 @@ async function main() {
     where: { username: 'admin' },
     update: {},
     create: {
+      name: 'Admin User',
+      email: 'admin@example.com',
       username: 'admin',
       password: hashedAdminPassword,
       role: Role.ADMIN,
@@ -23,6 +25,8 @@ async function main() {
     where: { username: 'owner' },
     update: {},
     create: {
+      name: 'Owner User',
+      email: 'owner@example.com',
       username: 'owner',
       password: hashedOwnerPassword,
       role: Role.OWNER,

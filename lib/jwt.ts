@@ -6,6 +6,8 @@ const secret = new TextEncoder().encode(
 
 export async function createToken(payload: {
   userId: string
+  name: string
+  email: string
   username: string
   role: string
 }) {
@@ -21,6 +23,8 @@ export async function verifyToken(token: string) {
     const verified = await jwtVerify(token, secret)
     return verified.payload as {
       userId: string
+      name: string
+      email: string
       username: string
       role: string
     }
